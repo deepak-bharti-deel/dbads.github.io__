@@ -30,8 +30,10 @@
 
     .box-img {
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      min-width: 200px;
+      min-height: 200px;
+      max-width: 200px;
+      max-height: 200px;
     }
 
     .box h1 {
@@ -182,6 +184,7 @@
         })
       }
     )
+
     let boxPicChangeGlobal
     $('.box_pic').hover(
       function inFunction() {
@@ -193,12 +196,14 @@
         let boxPicChange = setInterval(function(){
           const time = Date.now()
           $('.box_pic').prop('src', images[time % images.length])
-        }, 1500)
+        }, 1000)
         boxPicChangeGlobal = boxPicChange
       },
       function outFunction() {
         clearInterval(boxPicChangeGlobal)
+        console.log('--here')
         $('.box_pic').prop('src', 'img/deepak_kheerganga_rock.jpeg')
+        console.log('--here 2')
       }
     )
     
