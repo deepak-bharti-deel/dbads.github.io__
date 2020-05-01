@@ -194,11 +194,13 @@
         'img/deepak_jimcorbet.jpg',
         'img/deepak_lucknow.jpg',
         'img/deepak_kheerganga_rock.jpeg',
-        'img/deepak_lucknow_2.jpg' ]
+        'img/deepak_lucknow_2.jpg',
+        'img/deepak_csed.jpg',
+         ]
         let boxPicChange = setInterval(function(){
           const time = Date.now()
           $('.box_pic').prop('src', images[time % images.length])
-        }, 1000)
+        }, 800)
         boxPicChangeGlobal = boxPicChange
       },
       function outFunction() {
